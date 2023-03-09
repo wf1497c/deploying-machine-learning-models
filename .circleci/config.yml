@@ -51,10 +51,10 @@ jobs:
           node-version: '16.13'
       - run: node --version
       - run: npm i -g @railway/cli
+      - run: RAILWAY_TOKEN=3149c97c-04ef-42af-8b1b-bb1c012e226d railway run
       - run:
           name: Deploy to Railway App (You must set RAILWAY_TOKEN env var)
           command: |
-            RAILWAY_TOKEN=a40a6540-e9d8-49af-a1a3-f68d35683a74 railway run
             cd section-07-ci-and-publishing/house-prices-api && railway up --detach
 
   section_07_test_and_upload_regression_model:
