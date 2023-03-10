@@ -12,7 +12,7 @@ ROOT = PACKAGE_ROOT.parent
 CONFIG_FILE_PATH = PACKAGE_ROOT / "config.yml"
 DATASET_DIR = PACKAGE_ROOT / "datasets"
 TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
-path = "model-package/regression_model/config.yml"
+path = "/home/wf1497c/ML/ML_CICD/deploying-machine-learning-models/section-07-ci-and-publishing/model-package/regression_model/config.yml"
 
 
 class AppConfig(BaseModel):
