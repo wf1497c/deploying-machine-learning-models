@@ -12,6 +12,7 @@ ROOT = PACKAGE_ROOT.parent
 CONFIG_FILE_PATH = PACKAGE_ROOT / "config.yml"
 DATASET_DIR = PACKAGE_ROOT / "datasets"
 TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
+path = "model-package/regression_model/config.yml"
 
 
 class AppConfig(BaseModel):
@@ -69,7 +70,7 @@ def find_config_file() -> Path:
     raise Exception(f"Config not found at {CONFIG_FILE_PATH!r}")
 
 
-def fetch_config_from_yaml(cfg_path: Path = Path("/home/wf1497c/ML/ML_CICD/deploying-machine-learning-models/section-07-ci-and-publishing/model-package/regression_model/config.yml")) -> YAML:
+def fetch_config_from_yaml(cfg_path: Path = Path(path)) -> YAML:
     """Parse YAML containing the package configuration."""
 
     if not cfg_path:
