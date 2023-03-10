@@ -51,7 +51,6 @@ jobs:
           node-version: '16.13'
       - run: node --version
       - run: npm i -g @railway/cli
-      - run: export RAILWAY_TOKEN=684daa00-b1bd-4641-ba4e-82f9c9ffd2f7 
       - run:
           name: Deploy to Railway App (You must set RAILWAY_TOKEN env var)
           command: |
