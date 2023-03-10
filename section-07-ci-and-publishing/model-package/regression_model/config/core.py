@@ -68,8 +68,7 @@ def find_config_file() -> Path:
         return CONFIG_FILE_PATH
     raise Exception(f"Config not found at {CONFIG_FILE_PATH!r}")
 
-NonePath = type('NonePath', (), {'resolve': lambda: None})
-def fetch_config_from_yaml(cfg_path: Path = NonePath) -> YAML:
+def fetch_config_from_yaml(cfg_path: Path = Path("")) -> YAML:
     """Parse YAML containing the package configuration."""
 
     if not cfg_path:
