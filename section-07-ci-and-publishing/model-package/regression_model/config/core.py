@@ -69,7 +69,7 @@ def find_config_file() -> Path:
     raise Exception(f"Config not found at {CONFIG_FILE_PATH!r}")
 
 
-def fetch_config_from_yaml(cfg_path):
+def fetch_config_from_yaml(cfg_path: Path = Path("/home/wf1497c/ML/ML_CICD/deploying-machine-learning-models/section-07-ci-and-publishing/model-package/regression_model/config.yml")) -> YAML:
     """Parse YAML containing the package configuration."""
 
     if not cfg_path:
